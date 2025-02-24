@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="cadastro.css" media="screen" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+
+<head>
+    <title>Cadastro</title>
+    <link rel="icon" type="image/png" href="img/img-logo.png">
+</head>
+
+<body>
+    <form class="form">
+        <div class="img-background">
+            <div class="container">
+                <div id="etapa1" class="formulario-container column">
+                    <h2>Cadastro</h2>
+                    <progress style="width: 80%; margin: 1em;" max="100"></progress>
+
+                    <p>Nome de usuário *</p>
+                    <input type="text" placeholder="Digite seu nome de usuário">
+                    <p>Endereço de e-mail *</p>
+                    <input type="email" placeholder="Digite seu e-mail">
+                    <p>Crie sua senha *</p>
+                    <input type="password" placeholder="Digite a senha que deseja criar">
+                    <p>Confirme sua senha *</p>
+                    <input type="password" placeholder="Digite sua senha novamente">
+                    <div class="grupo-botoes gap-5">
+                        <a class="txt-voltar" href="index.html" target="_self">Voltar</a>
+                        <button class="btn-style" style="padding: 15px;" onclick="proximaEtapa()">Próximo</button>
+                    </div>
+                </div>
+
+                    <div id="etapa2" class="formulario-container column" style="display: none; height: 60%;">
+                        <h2>Cadastro</h2>
+                        <progress style="width: 80%; margin: 1em;" max="100"></progress>
+
+                        <p class="margin-bottom">Nome de exibição *</p>
+                        <input type="text" placeholder="Digite o nome a ser apresentado">
+                        <p class="margin-bottom">Selecione sua foto de perfil</p>
+                        <input type="file" accept="image/png, image/jpeg">
+                        <div class="grupo-botoes gap-5">
+                            <!--                         <button onclick="etapaAnterior()">Voltar</button> -->
+                            <button class="btn-style" style="padding: 15px; width: 100%;">Cadastrar</button>
+                        </div>
+                    </div>
+            </div>
+
+            <script>
+                function proximaEtapa() {
+                    document.getElementById('etapa1').style.display = 'none';
+                    document.getElementById('etapa2').style.display = 'flex';
+                }
+                function etapaAnterior() {
+                    document.getElementById('etapa1').style.display = 'flex';
+                    document.getElementById('etapa2').style.display = 'none';
+                }
+            </script>
+        </div>
+    </form>
+</body>
+
+</html>
+
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .form {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    a,
+    button,
+    input,
+    p {
+        font-family: 'Plus Jakarta Sans';
+    }
+
+h2 {
+    margin-top: 1.5em;
+}
+
+    button {
+        padding: 10px;
+        font-size: medium;
+        transition: 0.4s;
+        display: inline-block;
+        border: 0;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email] {
+        width: 80%;
+        padding: 12px 20px;
+        border-radius: 3px;
+        border: 4px solid #E5DCDC;
+        box-sizing: border-box;
+    }
+
+    p {
+        margin-block-end: 6px;
+        width: 80%;
+        justify-content: flex-start;
+    }
+
+    .btn-style {
+        background-color: #31afe1;
+        color: white;
+        border-radius: 12px;
+    }
+
+    .btn-style:hover {
+        background-color: #2681d6;
+    }
+
+    .img-background {
+        background-image: url('img/img-login.jpg');
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .formulario-container {
+        background-color: #FAFAFAFA;
+/*         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; */
+    }
+
+/*     .center-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+ */
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        height: 85%;
+    }
+
+    .grupo-botoes {
+        display: flex;
+        justify-content: flex-end;
+        width: 80%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .txt-voltar {
+        width: 45%;
+        padding: 15px;
+        display: flex;
+        justify-content: flex-end;
+        color: #A59999;
+    }
+
+    .gap-5 {
+        column-gap: 5%;
+    }
+</style>

@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="index.css" media="screen" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-  rel="stylesheet">
 
 <head>
   <title>Santos à Mesa</title>
   <link rel="icon" type="image/png" href="img/img-logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <form class="form">
-
     <div class="img-background">
-
       <div style="margin-top: 30px;">
-
         <div class="grid-container">
-
           <div class="row justify-center gap-5">
             <img src="img/img-logo.png" width="45" height="40" />
             <h1 style="color: white;"> SANTOS À MESA </h1>
           </div>
-
           <div class="justify-center">
             <button class="btn-menu btn-border-start">Home</button>
             <button class="btn-menu">Ver Localidades</button>
@@ -33,15 +27,12 @@
             <button class="btn-menu">Perguntas Frequentes</button>
             <button class="btn-menu btn-border-end">Quem somos nós</button>
           </div>
-
           <div class="justify-center gap-5">
             <u style="width: 45%; padding: 15px; display: flex; justify-content: flex-end; color: white;">Login</u>
             <button class="btn-style" style="width: 45%; padding: 15px;">Cadastrar</button>
           </div>
         </div>
-
       </div>
-
       <div class="center-container fade-in" style="margin-top: 20px;">
         <h2 style="color: white">Descubra lugares incríveis para comer em Santos</h2>
         <div class="gap-5" style="display: flex; width: 100%; max-width: 600px; height: 40px;">
@@ -49,20 +40,14 @@
           <button class="btn-style" style="width: 170px;"><i class="fa fa-search"></i> Pesquisar</button>
         </div>
       </div>
-
     </div>
     </div>
-
     </div>
     <div class="center-container fade-in" style="margin-top: 10px; margin-bottom: 10px;">
       <h2> Melhores avaliados </h2>
     </div>
-
-
     <div class="card-container fade-in" style="margin-bottom: 60px;">
-
       <div></div>
-
       <div class="card">
         <img class="card-image" src="img/img-placeholder.jpg">
         <div class="container">
@@ -71,9 +56,7 @@
           <button class="btn-style" style="font-size: small;">Saiba mais</button>
         </div>
       </div>
-
       <div></div>
-
       <div class="card">
         <img class="card-image" src="img/img-placeholder-2.jpg">
         <div class="container">
@@ -82,9 +65,7 @@
           <button class="btn-style" style="font-size: small;">Saiba mais</button>
         </div>
       </div>
-
       <div></div>
-
       <div class="card">
         <img class="card-image" src="img/img-placeholder-3.jpg">
         <div class="container">
@@ -93,12 +74,8 @@
           <button class="btn-style" style="font-size: small;">Saiba mais</button>
         </div>
       </div>
-
       <div></div>
-
     </div>
-
-
     <div class="bottom-row">
       <div class="center-container" style="color: rgb(232, 232, 236); padding: 15px;">
         <h3> SANTOS À MESA </h3>
@@ -106,10 +83,169 @@
       </div>
       <div class="img-mureta" style="margin-top: 15px" />
     </div>
-
   </form>
 </body>
-
 </div>
 
 </html>
+
+<style>
+  .form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -40px;
+  }
+
+  .img-background {
+    background-image: url('img/img-homepage.jpg');
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+  }
+
+  .img-mureta {
+    background-image: url('img/img-mureta.png');
+    height: 45px;
+    width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 22% 55% 21%;
+    grid-gap: 1%;
+    padding: 10px;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1,
+  h2,
+  h3,
+  u,
+  button,
+  input {
+    font-family: 'Plus Jakarta Sans';
+  }
+
+  button {
+    padding: 10px;
+    font-size: medium;
+    transition: 0.4s;
+    display: inline-block;
+    border: 0;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 0;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .btn-border-start {
+    border-end-start-radius: 10px;
+    border-start-start-radius: 10px;
+  }
+
+  .btn-border-end {
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+  }
+
+  .btn-menu {
+    border: 1.5px solid #a4a3ab;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+  }
+
+  .btn-menu:hover {
+    background-color: #cccbd2;
+  }
+
+  .btn-style {
+    background-color: #31afe1;
+    color: white;
+    border-radius: 12px;
+  }
+
+  .btn-style:hover {
+    background-color: #2681d6;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.2fr 1fr 0.2fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #a4a3ab;
+    transition: 0.3s;
+    width: 90%;
+    border-radius: 12px;
+    max-height: 300px;
+    background-color: white;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .card-image {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 55%;
+  }
+
+  .container {
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: 1.5s fadeInUp;
+  }
+
+  .bottom-row {
+    background-color: #247895;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  .justify-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gap-5 {
+    column-gap: 5%;
+  }
+</style>

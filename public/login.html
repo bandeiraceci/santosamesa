@@ -4,7 +4,6 @@
 <head>
     <title>Login</title>
     <link rel="icon" type="image/png" href="public/img/img-logo.png">
-    <link rel="stylesheet" type="text/css" href="login.css" media="screen" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +14,12 @@
 <body>
     <form class="form" style="background-color: #F2F0F0;">
         <div class="grid-container">
-
             <div class="img-background">
                 <div class="column center-container">
                     <h1 class="fade-in" style="color: white;">SANTOS À MESA</h1>
                     <h2 class="fade-in" style="color: white;">Descubra lugares incríveis para comer em Santos</h2>
                 </div>
             </div>
-
             <div class="column center-container">
                 <h1>Login</h1>
                 <p style="margin-block-end: 6px;">E-mail</p>
@@ -34,9 +31,105 @@
                     <a href="index.html" style="margin-block-start: 1em; color: #A09898;">CANCELAR</a>
                 </div>
             </div>
-
         </div>
     </form>
 </body>
-
 </html>
+
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .form {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    a,
+    button,
+    input,
+    p {
+        font-family: 'Plus Jakarta Sans';
+    }
+
+    button {
+        padding: 10px;
+        font-size: medium;
+        transition: 0.4s;
+        display: inline-block;
+        border: 0;
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 3px;
+        border: 4px solid #E5DCDC;
+        box-sizing: border-box;
+    }
+
+    .btn-style {
+        background-color: #31afe1;
+        color: white;
+        border-radius: 12px;
+    }
+
+    .btn-style:hover {
+        background-color: #2681d6;
+    }
+
+    .img-background {
+        background-image: url('img/img-login.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        height: 100vh;
+    }
+
+    .center-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            transform: translateY(60%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    .fade-in {
+        animation: 1.5s fadeInUp;
+    }
+</style>

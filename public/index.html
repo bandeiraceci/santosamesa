@@ -27,11 +27,26 @@
             <button class="btn-menu" style="background-color: white">Perguntas Frequentes</button>
             <a class="btn-menu btn-border-end" style="background-color: white" href="sobreNos.html">Sobre Nós</a>
           </div>
-          <div class="justify-center gap-5">
-            <a class="txt-login" href="login.html" target="_self">Login</a>
-            <a href="cadastro.html" class="btn-style"
-              style="width: 45%; padding: 15px; text-align: center; text-decoration: none;">Cadastrar</a>
+
+
+          <div id="login-container">
+            <div class="justify-center gap-5">
+              <a class="txt-login" href="login.html" target="_self">Login</a>
+              <a href="cadastro.html" class="btn-style"
+                style="width: 45%; padding: 15px; text-align: center; text-decoration: none;">Cadastrar</a>
+            </div>
           </div>
+
+          <div id="usuario-logado" style="display: none;">
+            <div class="justify-center gap-5" style="align-items: center;">
+              <img class="imagem-perfil" src="img/placeholder-perfil.png" alt="Foto de Perfil">
+              <div style="display: flex; flex-direction: column;">
+                <p style="color: white; margin-bottom: 2px; margin-top: 2px">User Teste</p>
+                <a style="color: white;" href="perfil.html">Ver Perfil</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="center-container fade-in" style="margin-top: 20px;">
@@ -90,6 +105,19 @@
 
 </html>
 
+<script>
+  var logado = true;
+
+  if (logado) {
+    document.getElementById('login-container').style.display = 'none';
+    document.getElementById('usuario-logado').style.display = 'block';
+  } else {
+    document.getElementById('usuario-logado').style.display = 'none';
+    document.getElementById('login-container').style.display = 'block';
+  }
+
+</script>
+
 <style>
   .form {
     position: absolute;
@@ -131,6 +159,7 @@
   h2,
   h3,
   a,
+  p,
   button,
   input {
     font-family: 'Plus Jakarta Sans';
@@ -225,6 +254,14 @@
     display: flex;
     justify-content: flex-end;
     color: white;
+  }
+
+  .imagem-perfil {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.500);
   }
 
   @keyframes fadeInUp {
